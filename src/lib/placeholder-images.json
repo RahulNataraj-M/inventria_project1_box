@@ -1,0 +1,112 @@
+{
+  "placeholderImages": [
+    {
+      "id": "aluminum-scrap-1",
+      "description": "Clean aluminum turnings and chips.",
+      "imageUrl": "https://images.unsplash.com/photo-1763950866531-82630c26a66b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZXRhbCUyMHNoYXZpbmdzfGVufDB8fHx8MTc2OTY4MTkzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "metal shavings"
+    },
+    {
+      "id": "aluminum-scrap-2",
+      "description": "A pile of aluminum scrap.",
+      "imageUrl": "https://images.unsplash.com/photo-1722695694560-f452b0919d3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZXRhbCUyMHNjcmFwfGVufDB8fHx8MTc2OTU5MDcwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "metal scrap"
+    },
+    {
+      "id": "aluminum-scrap-3",
+      "description": "Close up of aluminum scrap.",
+      "imageUrl": "https://images.unsplash.com/photo-1695533811168-7653f4921161?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbHVtaW51bSUyMHdhc3RlfGVufDB8fHx8MTc2OTY4MTkzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aluminum waste"
+    },
+    {
+      "id": "abs-regrind-1",
+      "description": "Black ABS plastic regrind.",
+      "imageUrl": "https://images.unsplash.com/photo-1607854364114-f2c2b14f8bb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwbGFzdGljJTIwcGVsbGV0c3xlbnwwfHx8fDE3Njk2ODE5MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plastic pellets"
+    },
+    {
+      "id": "abs-regrind-2",
+      "description": "Shredded plastic for recycling.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1572213426852-0e4ed8f41ff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwbGFzdGljJTIwd2FzdGV8ZW58MHx8fHwxNzY5NjgxOTMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "plastic waste"
+    },
+    {
+      "id": "abs-regrind-3",
+      "description": "Pile of shredded black plastic.",
+      "imageUrl": "https://images.unsplash.com/photo-1606037150583-fb842a55bae7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyZWN5Y2xlZCUyMHBsYXN0aWN8ZW58MHx8fHwxNzY5NjgxOTMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "recycled plastic"
+    },
+    {
+      "id": "denim-remnants-1",
+      "description": "A pile of denim fabric remnants.",
+      "imageUrl": "https://images.unsplash.com/photo-1532190370294-e81fe487b61a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZW5pbSUyMGZhYnJpY3xlbnwwfHx8fDE3Njk2MjA1MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "denim fabric"
+    },
+    {
+      "id": "denim-remnants-2",
+      "description": "Folded stacks of denim jeans.",
+      "imageUrl": "https://images.unsplash.com/photo-1718252540511-e958742e4165?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxqZWFucyUyMHN0YWNrfGVufDB8fHx8MTc2OTY4MTkzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jeans stack"
+    },
+    {
+      "id": "denim-remnants-3",
+      "description": "Close up of denim texture.",
+      "imageUrl": "https://images.unsplash.com/photo-1631112230741-446762ee05ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZW5pbSUyMHRleHR1cmV8ZW58MHx8fHwxNzY5NjMzNDUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "denim texture"
+    },
+    {
+      "id": "steel-slag-1",
+      "description": "Molten steel being poured.",
+      "imageUrl": "https://i.pinimg.com/1200x/b6/e0/42/b6e042fbc841ae5788a186e894b5ae85.jpg",
+      "imageHint": "molten steel"
+    },
+    {
+      "id": "pcb-ewaste-1",
+      "description": "A printed circuit board with components.",
+      "imageUrl": "https://images.unsplash.com/photo-1697952431907-8542919a16b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjaXJjdWl0JTIwYm9hcmR8ZW58MHx8fHwxNzY5NjgwMjkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "pcb-ewaste-2",
+      "description": "Another view of a complex circuit board.",
+      "imageUrl": "https://images.unsplash.com/photo-1517055729445-fa7d27394b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZWxlY3Ryb25pYyUyMGNvbXBvbmVudHN8ZW58MHx8fHwxNzY5NjM0NzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronic components"
+    },
+    {
+      "id": "pcb-ewaste-3",
+      "description": "A detailed shot of PCB traces.",
+      "imageUrl": "https://images.unsplash.com/photo-1614903755790-c7aa5dc436c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbGVjdHJvbmljcyUyMG1hY3JvfGVufDB8fHx8MTc2OTY4MTkzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronics macro"
+    },
+    {
+      "id": "acetone-drum-1",
+      "description": "A steel barrel for industrial chemicals.",
+      "imageUrl": "https://i.pinimg.com/736x/52/b1/c6/52b1c651771fbea7402c1394f2e00c3b.jpg",
+      "imageHint": "steel barrel"
+    },
+    {
+      "id": "fly-ash-1",
+      "description": "A pile of grey fly ash powder.",
+      "imageUrl": "https://i.pinimg.com/1200x/2c/0c/05/2c0c055850efced6c61e1b227b868353.jpg",
+      "imageHint": "grey powder"
+    },
+    {
+      "id": "crushed-concrete-1",
+      "description": "Aggregate from crushed concrete.",
+      "imageUrl": "https://images.unsplash.com/photo-1652792701770-6ce1f2cea1ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjcnVzaGVkJTIwY29uY3JldGV8ZW58MHx8fHwxNzY5NjgxOTMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "crushed concrete"
+    },
+    {
+      "id": "glass-cullet-1",
+      "description": "Mixed color crushed glass cullet.",
+      "imageUrl": "https://images.unsplash.com/photo-1596902362438-e8516a972fb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjcnVzaGVkJTIwZ2xhc3N8ZW58MHx8fHwxNzY5NjgxOTMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "crushed glass"
+    },
+    {
+      "id": "cardboard-bales-1",
+      "description": "Bales of corrugated cardboard for recycling.",
+      "imageUrl": "https://i.pinimg.com/1200x/42/5c/68/425c68f6601eb13d68193054341900ab.jpg",
+      "imageHint": "cardboard bales"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "entities": {
+    "Product": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Product",
+      "type": "object",
+      "description": "Represents a product listed by a factory.",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the product." },
+        "name": { "type": "string", "description": "Name of the product." },
+        "description": { "type": "string", "description": "Detailed description of the product." },
+        "price": { "type": "number", "description": "Price of the product." },
+        "priceUnit": { "type": "string", "enum": ["ton", "kg"], "description": "Unit for the price (per ton or per kg)." },
+        "license": { "type": "string", "description": "License information for authorized sale of the product." },
+        "companyRegistrationNumber": { "type": "string", "description": "The seller's company registration number." },
+        "verificationDocs": { "type": "array", "items": { "type": "string" }, "description": "URLs of uploaded verification documents." },
+        "images": { "type": "array", "items": { "type": "string" }, "description": "URLs of images of the product." },
+        "category": { "type": "string", "description": "Category of the product." },
+        "factory": {
+          "type": "object",
+          "description": "Reference to the Factory that owns this product.",
+          "properties": {
+            "id": { "type": "string" },
+            "name": { "type": "string" }
+          },
+          "required": ["id", "name"]
+        },
+        "specifications": { "type": "array", "items": { "type": "object", "properties": { "name": { "type": "string" }, "value": { "type": "string" } } } },
+        "reviews": { "type": "array", "items": { "$ref": "#/entities/Review" } },
+        "details": { "type": "string", "description": "Extended details about the product including history and uses." },
+        "quantity": { "type": "number", "description": "Available stock quantity." }
+      },
+      "required": ["id", "name", "price", "priceUnit", "description", "images", "category", "factory", "details", "license", "companyRegistrationNumber"]
+    },
+    "Category": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Category",
+      "type": "object",
+      "description": "Represents a product category.",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "icon": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "Review": {
+        "title": "Review",
+        "type": "object",
+        "properties": {
+            "id": {"type": "string"},
+            "author": {"type": "string"},
+            "avatar": {"type": "string"},
+            "rating": {"type": "number"},
+            "comment": {"type": "string"}
+        },
+        "required": ["id", "author", "rating", "comment"]
+    },
+    "User": {
+      "title": "User",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "auth": {
+    "providers": ["password", "anonymous", "google.com"]
+  },
+  "firestore": {
+    "products": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Collection of all products available in the marketplace."
+    },
+    "categories": {
+      "schema": { "$ref": "#/entities/Category" },
+      "description": "Collection of all product categories."
+    },
+    "/products/{productId}/reviews": {
+        "schema": { "$ref": "#/entities/Review"},
+        "description": "Sub-collection for reviews on a specific product."
+    }
+  }
+}

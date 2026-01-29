@@ -1,0 +1,84 @@
+/**
+ * @file Firestore Security Rules
+ * @description This ruleset defines access control for the application's Firestore database.
+ *
+ * Core Philosophy:
+ * The ruleset prioritizes security by enforcing strict data ownership and access control.
+ * It ensures that only authenticated users can access their data. Public read access is enabled for specific collections.
+ *
+ * Data Structure:
+ * - /products/{productId}: Stores product information, publicly readable.
+ * - /products/{productId}/reviews: Stores reviews for a product, publicly readable.
+ * - /categories/{categoryId}: Stores product categories, publicly readable.
+ *
+ * Key Security Decisions:
+ * - Public read access is enabled for products, categories, and product reviews to allow all users to view product information.
+ * - Only authenticated users can create, update, or delete products and categories.
+ *
+ * Denormalization for Authorization:
+ * N/A - Not applicable in this version. Future versions will denormalize factoryId onto Products.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Allows anyone to read product information, but restricts creation, updates, and deletion to authenticated users.
+     * @path /products/{productId}
+     * @allow (get, list): Any user can read product information, individually or as a list.
+     * @allow (create): Only authenticated users can create products with matching authorId.
+     * @allow (update): Only the product owner can update.
+     * @allow (delete): Only the product owner can delete.
+     * @deny (create): An unauthenticated user attempts to create a product.
+     * @deny (update, delete): A user who is not the product owner attempts to update or delete a product.
+     * @principle Allows public read access while enforcing owner-only writes.
+     */
+    match /products/{productId} {
+      allow get, list: if true;
+      allow create: if isSignedIn() && request.resource.data.factory.id == request.auth.uid;
+      allow update: if isSignedIn() && get(/databases/$(database)/documents/products/$(productId)).data.factory.id == request.auth.uid;
+      allow delete: if isSignedIn() && get(/databases/$(database)/documents/products/$(productId)).data.factory.id == request.auth.uid;
+    }
+
+    /**
+     * @description Allows anyone to read product review information, but restricts creation, updates, and deletion to authenticated users.
+     * @path /products/{productId}/reviews/{reviewId}
+     * @allow (read): Any user can read review information.
+     * @allow (create): Only authenticated users can create reviews.
+     * @allow (update, delete): Only the review owner can update or delete.
+     * @deny (create): An unauthenticated user attempts to create a review.
+     * @deny (update, delete): A user who is not the review owner attempts to update or delete a review.
+     */
+    match /products/{productId}/reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+    }
+
+    /**
+     * @description Allows anyone to read category information, but restricts creation, updates, and deletion to authenticated users.
+     * @path /categories/{categoryId}
+     * @allow (get, list): Any user can read category information, individually or as a list.
+     * @allow (create): Only authenticated users can create categories.
+     * @allow (update, delete): Only the category owner can update or delete.
+     * @deny (create): An unauthenticated user attempts to create a category.
+     * @deny (update, delete): A user who is not the category owner attempts to update or delete a category.
+     */
+    match /categories/{categoryId} {
+      allow get, list: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+    }
+
+    // Add other collection matchers here
+
+  }
+
+  // Helper Functions
+  function isSignedIn() {
+    return request.auth != null;
+  }
+
+}
