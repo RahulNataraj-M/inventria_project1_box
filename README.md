@@ -20,6 +20,6 @@ The platform enables industries to **list, discover, and exchange by-products**,
 * **Firebase**
 * **Tailwind CSS**
 
-## 🎯 Objective
+## Objective
 
 To reduce industrial waste by creating a digital marketplace where **by-products from one industry can become useful raw materials for another**.
